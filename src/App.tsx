@@ -1,19 +1,22 @@
-import Header from './components/Cabecalho'
-import Hero from './components/Hero'
-import ListaVagas from './containers/ListaVagas'
-
-import './global.css'
+import EstiloGLobal, { Container } from './style';
+import Header from './containers/Header/index'
+import HeroTS from './containers/Hero/index';
+import ListaVagas from './containers/ListaDeVagas';
 
 function App() {
   return (
     <>
+      <EstiloGLobal />
+
       <Header />
-      <Hero />
-      <div className="container">
+      <HeroTS />
+      <Container>
         <ListaVagas />
-      </div>
+      </Container>
+
     </>
-  )
+
+  );
 }
 
-export default App
+export default App;
